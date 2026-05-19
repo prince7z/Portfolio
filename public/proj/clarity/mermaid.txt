@@ -1,0 +1,207 @@
+graph TB
+
+    subgraph User_Access
+        A1[Web App]
+        A2[Admin Dashboard]
+    end
+
+    subgraph API_Gateway
+        B1[Load Balancer]
+        B2[n8n Webhook Cluster]
+    end
+
+    subgraph Async_AI_Processing
+        C1[Gemini Worker Pool]
+        C2[Research Worker Pool]
+        C3[Gamma Polling Workers]
+    end
+
+    subgraph Queue_System
+        D1[Redis Queue]
+        D2[Retry Queue]
+        D3[Dead Letter Queue]
+    end
+
+    subgraph Storage
+        E1[Google Sheets]
+        E2[Cloud Object Storage]
+        E3[Presentation Archive]
+    end
+
+    subgraph External_Services
+        F1[Gemini API]
+        F2[Tavily API]
+        F3[Gamma API]
+    end
+
+    A1 --> B1
+    A2 --> B1
+
+    B1 --> B2
+
+    B2 --> D1
+
+    D1 --> C1
+    D1 --> C2
+    D1 --> C3
+
+    C1 --> F1
+    C2 --> F2
+    C3 --> F3
+
+    C1 --> E1
+    C2 --> E1
+    C3 --> E1
+
+    C3 --> E2
+    E2 --> E3
+
+    C1 --> D2
+    C2 --> D2
+    C3 --> D2
+
+    D2 --> D3
+///////////////////////////////////////
+flowchart LR
+
+    A[Uploaded PPTX]
+        --> B[Decode Base64]
+
+    B --> C[ZIP XML Parser]
+
+    C --> D[Extract Slides XML]
+
+    D --> E[Extract Theme XML]
+
+    E --> F[Parse Fonts]
+
+    E --> G[Parse Colors]
+
+    E --> H[Parse Font Sizes]
+
+    F --> I[Build DNA Profile]
+    G --> I
+    H --> I
+
+    I --> J[Gemini Style Analysis]
+
+    J --> K[Structured Design DNA JSON]
+////////////////////////////////////////////////
+graph LR
+
+    A[Reference PPTX]
+        --> B[Deck DNA Extraction]
+
+    C[Excel Financial Data]
+        --> D[Financial Parsing Engine]
+
+    E[Company Metadata]
+        --> F[Market Research]
+
+    B --> G[Gemini DNA Prompt]
+    D --> H[Competitive Analysis Prompt]
+    F --> I[Content Architecture Prompt]
+
+    G --> J[Gemini API]
+    H --> J
+    I --> J
+
+    J --> K[DNA Profile]
+    J --> L[Competitive Insights]
+    J --> M[Slide Structure]
+
+    K --> N[Prompt Aggregation]
+    L --> N
+    M --> N
+
+    N --> O[Gamma Presentation Prompt]
+///////////////////////////////////////////////////graph TB
+
+    subgraph Client_Layer
+        A[Frontend / Form Submission]
+        B[Webhook Consumer]
+    end
+
+    subgraph API_Entry
+        C[n8n Webhook Trigger]
+        D[Immediate Response Engine]
+    end
+
+    subgraph Intake_Processing
+        E[Extract Form Data]
+        F[Generate Presentation ID]
+        G[Extract Excel Data]
+        H[PPTX DNA Extraction]
+    end
+
+    subgraph Intelligence_Layer
+        I1[Gemini DNA Extractor]
+        I2[Competitive Intelligence Generator]
+        I3[Content Architecture Generator]
+        I4[Deep Market Research]
+    end
+
+    subgraph AI_Transformation
+        J1[Parse DNA Profile]
+        J2[Prep Final Prompt Data]
+        J3[Build Gamma Request]
+    end
+
+    subgraph Presentation_Generation
+        K1[Gamma API]
+        K2[PPT Generation]
+        K3[Presentation Export]
+    end
+
+    subgraph Persistence
+        L1[Google Sheets Tracking]
+        L2[Progress State Storage]
+    end
+
+    subgraph External_APIs
+        M1[Gemini 2.5 Flash]
+        M2[Tavily Research API]
+        M3[Gamma Presentation API]
+    end
+
+    A --> C
+    C --> E
+    E --> F
+
+    F --> D
+    D --> B
+
+    E --> G
+    E --> H
+
+    H --> I1
+    G --> I2
+    G --> I3
+    E --> I4
+
+    I1 --> M1
+    I2 --> M1
+    I3 --> M1
+    I4 --> M2
+
+    I1 --> J1
+    J1 --> J2
+    I2 --> J2
+    I3 --> J2
+    I4 --> J2
+
+    J2 --> J3
+    J3 --> K1
+    K1 --> M3
+
+    M3 --> K2
+    K2 --> K3
+
+    F --> L1
+    I1 --> L1
+    I2 --> L1
+    I3 --> L1
+    K1 --> L1
+    K3 --> L1
+
+    L1 --> L2

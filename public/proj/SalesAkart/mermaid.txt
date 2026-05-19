@@ -1,0 +1,192 @@
+graph LR
+
+A[Business Event]
+    --> B[Outbox Table]
+
+B --> C[BullMQ Queue]
+
+C --> D[Queue Workers]
+
+D --> E1[Notification Worker]
+D --> E2[Search Worker]
+D --> E3[Analytics Worker]
+
+E1 --> F1[AWS SES]
+E2 --> F2[Meilisearch]
+E3 --> F3[Metrics Engine]
+
+D --> G[Retry Logic]
+
+G --> H{Retry Limit Reached?}
+
+H -->|No| C
+H -->|Yes| I[Dead Letter Queue]
+
+
+
+
+
+//////////////////////////////////////////////////////
+graph TB
+
+    subgraph Client Layer
+        A[Customer Web App]
+        B[Admin Dashboard]
+        C[Mobile Clients]
+    end
+
+    subgraph Edge Layer
+        D[Nginx / Reverse Proxy]
+        E[CDN]
+    end
+
+    subgraph Backend Core
+        F[Express.js API Server]
+
+        subgraph Middleware
+            G1[CORS]
+            G2[JWT Auth]
+            G3[Rate Limiter]
+            G4[Validation]
+            G5[Error Handler]
+        end
+
+        subgraph Modules
+            H1[Catalog Module]
+            H2[Cart Module]
+            H3[Orders Module]
+            H4[Inventory Module]
+            H5[Payments Module]
+            H6[Notification Module]
+            H7[Search Module]
+            H8[Analytics Module]
+        end
+    end
+
+    subgraph Data Layer
+        I[(PostgreSQL)]
+        J[(Redis)]
+        K[Meilisearch]
+    end
+
+    subgraph Async Infrastructure
+        L[BullMQ Queues]
+        M[Notification Worker]
+        N[Search Indexing Worker]
+        O[Cron Jobs]
+    end
+
+    subgraph External Services
+        P[AWS S3]
+        Q[AWS SES / Brevo]
+        R[PayFast]
+        S[IPWho.is]
+    end
+
+    A --> D
+    B --> D
+    C --> D
+
+    D --> E
+    E --> F
+
+    F --> H1
+    F --> H2
+    F --> H3
+    F --> H4
+    F --> H5
+    F --> H6
+    F --> H7
+    F --> H8
+
+    H1 --> I
+    H2 --> I
+    H3 --> I
+    H4 --> I
+    H5 --> I
+
+    H1 --> J
+    H2 --> J
+    H8 --> J
+
+    H7 --> K
+
+    H6 --> L
+    H7 --> L
+
+    L --> M
+    L --> N
+
+    M --> Q
+    N --> K
+
+    H1 --> P
+    H5 --> R
+    H8 --> S
+
+    O --> I
+
+////////////////////////////////////////////////////
+graph TB
+
+subgraph Users
+    A[Customers]
+    B[Admins]
+end
+
+subgraph Edge
+    C[Cloudflare CDN]
+    D[Nginx Load Balancer]
+end
+
+subgraph Compute Cluster
+    E1[API Instance 1]
+    E2[API Instance 2]
+    E3[API Instance N]
+end
+
+subgraph Worker Cluster
+    F1[Notification Workers]
+    F2[Search Workers]
+    F3[Cron Workers]
+end
+
+subgraph Storage
+    G[(PostgreSQL Primary)]
+    H[(Redis Cluster)]
+    I[Meilisearch]
+    J[S3 Bucket]
+end
+
+subgraph External
+    K[PayFast]
+    L[AWS SES]
+end
+
+A --> C
+B --> C
+
+C --> D
+
+D --> E1
+D --> E2
+D --> E3
+
+E1 --> G
+E2 --> G
+E3 --> G
+
+E1 --> H
+E2 --> H
+E3 --> H
+
+F1 --> H
+F2 --> H
+
+F1 --> L
+F2 --> I
+
+E1 --> J
+E2 --> J
+
+E1 --> K

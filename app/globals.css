@@ -1,0 +1,96 @@
+@import url("https://fonts.cdnfonts.com/css/id-grotesk-trial");
+@import url("https://fonts.cdnfonts.com/css/id-grotesk");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+
+@theme {
+  --font-rubik:
+    var(--font-rubik), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sora:
+    var(--font-sora), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-archivo:
+    var(--font-archivo), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e88d67;
+  border-radius: 20px;
+}
+
+#companies-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+#companies-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@tailwind utilities;
+
+:root {
+  --foreground-hex: black;
+  --background-end-hex: #fff;
+  scroll-behavior: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-hex: rgb(255, 255, 255);
+    --background-end-hex: black;
+  }
+}
+
+* {
+  /* letter-spacing: 1px; */
+  /* word-spacing: 2px; */
+  font-style: normal;
+  font-family:
+    var(--font-rubik), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-display: swap;
+}
+
+#root {
+  scroll-behavior: auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 1.6s infinite ease-in-out;
+}

@@ -1,0 +1,180 @@
+graph TB
+
+    subgraph Frontend
+        A[React Dashboard]
+        B[POS System]
+        C[Admin Panel]
+    end
+
+    subgraph Backend
+        D[Express.js API Gateway]
+
+        subgraph Middleware
+            E1[CORS]
+            E2[JWT Authentication]
+            E3[Request Validation]
+            E4[Error Handler]
+        end
+
+        subgraph Services
+            F1[Auth Service]
+            F2[Product Sync Service]
+            F3[AutoPrice Engine]
+            F4[Dashboard Metrics]
+            F5[POS Service]
+            F6[Audit Logger]
+        end
+    end
+
+    subgraph Storage
+        G[(MongoDB)]
+    end
+
+    subgraph Workers
+        H1[AutoPrice Worker]
+        H2[Daily Maintenance Worker]
+    end
+
+    subgraph External
+        I[TakeAlot Seller API]
+    end
+
+    A --> D
+    B --> D
+    C --> D
+
+    D --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> F1
+    E3 --> F2
+    E3 --> F3
+    E3 --> F4
+    E3 --> F5
+
+    F1 --> G
+    F2 --> G
+    F3 --> G
+    F4 --> G
+    F5 --> G
+    F6 --> G
+
+    F2 --> I
+    F3 --> I
+    F4 --> I
+
+    H1 --> F3
+    H2 --> F2
+///////////////////////////////////////////////////
+sequenceDiagram
+
+    participant User
+    participant Frontend
+    participant API as Express API
+    participant Auth as JWT Middleware
+    participant Service as AutoPrice Engine
+    participant DB as MongoDB
+    participant TA as TakeAlot API
+
+    User->>Frontend: Configure AutoPrice Rule
+
+    Frontend->>API: POST /api/autoprice/set-autoprice
+
+    API->>Auth: Verify JWT Token
+
+    Auth->>DB: Load User + Integration
+
+    DB-->>Auth: User Context
+
+    Auth-->>API: Authorized
+
+    API->>Service: Validate Rule
+
+    Service->>DB: Create/Update AutoPay Document
+
+    DB-->>Service: Saved
+
+    Service-->>API: Success Response
+
+    API-->>Frontend: AutoPrice Enabled
+
+    loop Every 15 Minutes
+        Service->>TA: Fetch Competitor Prices
+        TA-->>Service: Pricing Data
+
+        Service->>Service: Calculate New Price
+
+        Service->>TA: Update Marketplace Price
+
+        TA-->>Service: Update Confirmation
+
+        Service->>DB: Store Audit Log
+    end
+
+//////////////////////////////////////////////////
+flowchart TD
+
+    A[Node-Cron Trigger]
+        --> B[Determine Intervals]
+
+    B --> C{Minute Value}
+
+    C -->|00| D[Run 15 30 60]
+    C -->|15| E[Run 15]
+    C -->|30| F[Run 15 30]
+    C -->|45| G[Run 15]
+
+    D --> H[Fetch Competitor Prices]
+    E --> H
+    F --> H
+    G --> H
+
+    H --> I[Analyze Market Prices]
+
+    I --> J{Winning Price?}
+
+    J -->|Yes| K[Keep Current Price]
+
+    J -->|No| L[Undercut Competitor]
+
+    L --> M[Apply Min Max Bounds]
+
+    M --> N[Update Price via API]
+
+    K --> O[Write Audit Logs]
+    N --> O
+
+    O --> P[Complete]
+//////////////////////////////////////////////
+graph TD
+
+    A[Client Request]
+        --> B[JWT Middleware]
+
+    B --> C{Token Valid?}
+
+    C -->|No| D[401 Unauthorized]
+
+    C -->|Yes| E[Load User]
+
+    E --> F[Load Integration]
+
+    F --> G[Resolve Role]
+
+    G --> H{Access Level}
+
+    H -->|SUPERADMIN| I[Full Access]
+
+    H -->|ADMIN| J[Integration Access]
+
+    H -->|MASTER| K[Advanced Seller Access]
+
+    H -->|POS USER| L[POS Only]
+
+    H -->|TA USER| M[Marketplace Only]
+
+    I --> N[Route Execution]
+    J --> N
+    K --> N
+    L --> N
+    M --> N
