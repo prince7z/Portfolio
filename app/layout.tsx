@@ -6,8 +6,6 @@ import Sidebar from "./components/Sidebar";
 import Copyright from "./sections/Copyright";
 import SplashScreenManager from "./components/SplashScreenManager";
 import { Providers } from "./providers";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { Analytics } from "@vercel/analytics/react";
 import { Archivo, Rubik, Sora } from "next/font/google";
 import TopoWaves from "./components/TopoWaves";
 
@@ -123,6 +121,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJFBFPE5FV"></script>
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-WJFBFPE5FV');` }} />
+      </head>
       <body
         className={`${rubik.variable} ${sora.variable} ${archivo.variable} bg-white font-sans antialiased overflow-x-hidden dark:bg-black`}
       >
@@ -135,8 +138,6 @@ export default function RootLayout({
             <Copyright />
           </SplashScreenManager>
         </Providers>
-        <GoogleAnalytics gaId="G-FHL88G3PMS" />
-        <Analytics />
       </body>
     </html>
   );
