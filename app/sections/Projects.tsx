@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   return (
     <section
-      className="flex flex-col mx-0 xl:mx-[10%] lg:mx-[7%] md:mx-[7%] py-28 pb-48 lg:pt-48"
+      className="flex flex-col mx-0 xl:mx-[10%] lg:mx-[7%] md:mx-[7%] py-22 pb-40 lg:pt-48"
       id="projects"
     >
       <header className="flex flex-row gap-4  justify-start lg:justify-end items-center font-b">

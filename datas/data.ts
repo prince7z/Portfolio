@@ -360,7 +360,7 @@ export const projects = [
     tag: "Personal Project",
     description:
       "VaurLis is an edtech platform for live classes, course management, and student tracking. Built while learning and exploring full-stack development, it features real-time class sessions, interactive course materials, and a user-friendly interface for students and educators.",
-    image: "/proj/VaurLis/554_1x_shots_so.webp",
+    image: "/proj/Vaurlis/554_1x_shots_so.webp",
     githubLink: "https://github.com/prince7z/vaurlis",
     stacks: ["React.js", "ReactBits", "TypeScript", "TailwindCss", "Node.js", "Express", "MongoDB", "WebRTC", "Vercel"],
   },

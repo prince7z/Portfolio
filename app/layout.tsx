@@ -134,7 +134,7 @@ export default function RootLayout({
           <SplashScreenManager>
             <Navbar />
             <Sidebar />
-            <main className="min-h-screen bg-white px-5 sm:px-12 dark:bg-black">{children}</main>
+            <main className="min-h-screen px-5 sm:px-12 dark:bg-black">{children}</main>
             <Copyright />
           </SplashScreenManager>
         </Providers>
