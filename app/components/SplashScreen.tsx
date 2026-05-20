@@ -5,13 +5,15 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 
 const NAME = "PRINCE SAHU";
-const LOADING_TEXT = "Becoming ,Beyond Static..";
+const LOADING_TEXT = "Becoming Beyond Static..";
 
 const splitText = (text: string) => text.split("");
 
 const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
   const [wipeOpen, setWipeOpen] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const backdropRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
   const nameRef = useRef<HTMLHeadingElement | null>(null);
   const loadingRef = useRef<HTMLParagraphElement | null>(null);
   const nameChars = useMemo(() => splitText(NAME), []);
@@ -96,7 +98,29 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
       );
 
       timeline.to({}, { duration: 1 });
-      timeline.add(() => setWipeOpen(true));
+
+      timeline.to(
+        contentRef.current,
+        {
+          scale: 1.28,
+          opacity: 0,
+          duration: 0.7,
+          ease: "power3.in",
+        },
+        "+=0.05",
+      );
+
+      timeline.to(
+        backdropRef.current,
+        {
+          opacity: 0,
+          duration: 0.7,
+          ease: "power2.out",
+        },
+        "<",
+      );
+
+      timeline.add(() => setWipeOpen(true), ">-0.05");
       timeline.to({}, { duration: 0.95 });
       timeline.add(() => finishLoading(), "+=0.05");
     });
@@ -109,24 +133,26 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
       className="fixed inset-0 z-[9999] flex min-h-screen w-full items-center justify-center overflow-hidden"
       style={{ backgroundColor: baseBackground }}
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: isDarkTheme
-            ? "radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_40%),radial-gradient(circle_at_bottom,rgba(232,141,103,0.18),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.05),transparent_20%,rgba(0,0,0,0.78))"
-            : "radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_40%),radial-gradient(circle_at_bottom,rgba(0,0,0,0.08),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.6),transparent_20%,rgba(255,255,255,0.92))",
-        }}
-      />
-      <div
-        className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.05)_24%,transparent_48%,rgba(255,255,255,0.08)_52%,transparent_78%)] bg-[length:200%_200%] animate-[sweep_2.8s_linear_infinite]"
-        style={{
-          opacity: isDarkTheme ? 0.35 : 0.16,
-          mixBlendMode: isDarkTheme ? "screen" : "multiply",
-        }}
-      />
-      <div className="noise-overlay absolute inset-0 opacity-40" />
+      <div ref={backdropRef} className="absolute inset-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: isDarkTheme
+              ? "radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_40%),radial-gradient(circle_at_bottom,rgba(232,141,103,0.18),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.05),transparent_20%,rgba(0,0,0,0.78))"
+              : "radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_40%),radial-gradient(circle_at_bottom,rgba(0,0,0,0.08),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.6),transparent_20%,rgba(255,255,255,0.92))",
+          }}
+        />
+        <div
+          className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.05)_24%,transparent_48%,rgba(255,255,255,0.08)_52%,transparent_78%)] bg-[length:200%_200%] animate-[sweep_2.8s_linear_infinite]"
+          style={{
+            opacity: isDarkTheme ? 0.35 : 0.16,
+            mixBlendMode: isDarkTheme ? "screen" : "multiply",
+          }}
+        />
+        <div className="noise-overlay absolute inset-0 opacity-40" />
+      </div>
 
-      <div className="relative z-20 flex w-full max-w-3xl flex-col items-center px-6 text-center">
+      <div ref={contentRef} className="relative z-20 flex w-full max-w-3xl flex-col items-center px-6 text-center">
         <h3
           ref={nameRef}
           className="mb-3 flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 text-[clamp(1.8rem,5vw,3.7rem)] font-normal uppercase leading-none tracking-[0.28em] sm:text-[clamp(2.1rem,4.2vw,4.2rem)]"

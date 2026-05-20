@@ -4,7 +4,7 @@ export const testimonials = [
     name: "Ms. Sneha Taori",
     position: "Corporate Trainer ,Speaker and Mentor",
     ref:"https://www.linkedin.com/in/thesnehataori/",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEYdRiFegxxtw/profile-displayphoto-shrink_800_800/B4DZcLQAgPGYAc-/0/1748240436575?e=1780531200&v=beta&t=OCSEUXWCz_M0u0AMv2J2PgBwxgjDi5OJStO-WAp_njY",
+    image: "/test/st.webp",
     testimonial:
     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
@@ -12,7 +12,7 @@ export const testimonials = [
     name: "Mr. Ajay josyula",
     position: "Senior Software Engineer, Tytan Technology Inc.",
     ref:"https://www.linkedin.com/in/ajay-kumar-josyula-505227b2/",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQHHetCii9mlrQ/profile-displayphoto-crop_800_800/B56Z4WZ1QGHwAM-/0/1778492334419?e=1780531200&v=beta&t=IE3VqzKwRPlCn_D1v17CLFDnHlJLe6_gwQUT79fwZns",
+    image: "/test/aj.webp",
     testimonial:
       "Working with Prince was a fantastic experience. He is a great communicator and always goes above and beyond to ensure project success.",
   },
@@ -28,7 +28,7 @@ export const testimonials = [
     name: "Mr. Zohaib Hassan",
     position: "Prof. Computer Science, BGIEM University",
     ref:"https://www.linkedin.com/in/zohaib-hassan-9a1b4b1b2/",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQEdgqo9jXbN4g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1640973114058?e=1780531200&v=beta&t=qBBRdiAFm3xoA3A2urgOtl99KE0Hx7x1ez-u0l8KY5Y",
+    image: "/test/zh.webp",
     testimonial:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   }

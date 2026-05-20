@@ -108,6 +108,12 @@ export const metadata: Metadata = {
       "Full Stack Developer building scalable backend systems, cloud-native applications, and modern web platforms using Next.js, Node.js, Redis, AWS, and TypeScript.",
     images: "https://yourdomain.com/og-image.png",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
