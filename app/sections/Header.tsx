@@ -99,9 +99,9 @@ const Header = () => {
     {/* Subtle fade overlay at bottom */}
     <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white via-white/20 to-transparent dark:from-black dark:via-black/40 pointer-events-none translate-y-7 transition-all duration-700 group-hover:translate-y-4.5" />
   </div>
+  <ScrollDownArrow />
 </section>
     </header>
-    <ScrollDownArrow />
     </>
   );
 };

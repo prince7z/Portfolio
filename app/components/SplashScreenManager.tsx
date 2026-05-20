@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import SplashScreen from "./SplashScreen";
 
+const FALLBACK_DURATION_MS = 4600;
+
 const SplashScreenManager = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -10,17 +12,20 @@ const SplashScreenManager = ({ children }: { children: React.ReactNode }) => {
     const isLoadedPage = window.location.pathname === "/";
     setIsLoading(isLoadedPage);
     if (isLoadedPage) {
-      const timer = setTimeout(() => setIsLoading(false), 3000); 
+      const timer = setTimeout(() => setIsLoading(false), FALLBACK_DURATION_MS);
       return () => clearTimeout(timer);
     } else {
       setIsLoading(false);
     }
   }, []);
 
-  return isLoading ? (
-    <SplashScreen finishLoading={() => setIsLoading(false)} />
-  ) : (
-    <>{children}</>
+  return (
+    <>
+      {children}
+      {isLoading ? (
+        <SplashScreen finishLoading={() => setIsLoading(false)} />
+      ) : null}
+    </>
   );
 };
 

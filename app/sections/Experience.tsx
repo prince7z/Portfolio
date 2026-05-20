@@ -90,15 +90,15 @@ const Experience = () => {
         <div
           id="companies-scrollbar"
           ref={containerRef}
-          className="flex lg:gap-0 overflow-x-scroll lg:inline-block w-[100%] lg:w-[40%]  "
+          className="flex w-[100%] flex-col gap-2 overflow-visible lg:inline-block lg:w-[40%] lg:gap-0 lg:overflow-x-scroll"
           // style={{ backgroundImage: "url('/patterns/pattern-4.svg')" }}
         >
           {companies.map((company, id) => (
             <div
               key={id}
-              className={`lg:w-full min-w-max flex-shrink-0 cursor-pointer hover:text-primary-color hover:bg-[#FBEDDD] transition-all px-5 py-2  ${
+              className={`w-full cursor-pointer px-4 py-2 text-sm leading-snug transition-all hover:bg-[#FBEDDD] hover:text-primary-color sm:text-base lg:w-full lg:min-w-max lg:flex-shrink-0 lg:px-5 lg:py-2 ${
                 tab === id &&
-                " lg:border-l-2 border-secondary-color-3 bg-[#FBEDDD] text-primary-color font-medium"
+                " border-secondary-color-3 bg-[#FBEDDD] font-medium text-primary-color lg:border-l-2"
               }`}
               onClick={() => handleTabClick(id)}
             >

@@ -29,7 +29,7 @@ const Testimonials = () => {
         <div className="w-[5%] lg:w-36 border-b-[1px] border-b-border-color"></div>
       </header>
 
-      <div className="relative bg-transparent rounded-lg p-6 lg:p-12 flex flex-col lg:flex-row items-center gap-8 min-h-[18rem]">
+      <div className="relative bg-transparent rounded-lg p-6 pb-20 lg:p-12 lg:pb-12 flex flex-col lg:flex-row items-center gap-8 min-h-[18rem]">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -85,7 +85,7 @@ const Testimonials = () => {
           </motion.div>
         </AnimatePresence>
 
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 lg:static lg:translate-x-0 flex gap-3">
+        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-3 lg:static lg:translate-x-0">
           {testimonials.map((_, i) => (
             <button
               key={i}
