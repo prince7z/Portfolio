@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 import SplashScreen from "./SplashScreen";
 
-const FALLBACK_DURATION_MS = 7200;
+// Reduced fallback so the splash doesn't hold the page too long
+const FALLBACK_DURATION_MS = 5000;
 
 const SplashScreenManager = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);

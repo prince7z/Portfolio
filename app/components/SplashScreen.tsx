@@ -53,8 +53,8 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.6,
-          stagger: 0.055,
+          duration: 0.45,
+          stagger: 0.045,
           ease: "power4.out",
         },
         0,
@@ -66,63 +66,63 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
         {
           opacity: 1,
           y: 0,
-          duration: 0.3,
-          stagger: 0.045,
+          duration: 0.22,
+          stagger: 0.035,
           ease: "power2.out",
         },
-        "-=0.1",
+        "-=0.08",
       );
 
       timeline.to(
         loadingLetters,
         {
           opacity: 0.72,
-          duration: 0.22,
-          stagger: 0.03,
-          repeat: 2,
+          duration: 0.18,
+          stagger: 0.025,
+          repeat: 1,
           yoyo: true,
           ease: "sine.inOut",
         },
-        "+=0.08",
+        "+=0.06",
       );
 
       timeline.to(
         [nameLetters, loadingLetters],
         {
           color: revealText,
-          duration: 0.45,
-          stagger: 0.025,
+          duration: 0.35,
+          stagger: 0.02,
           ease: "power2.out",
         },
-        "-=0.1",
+        "-=0.08",
       );
 
-      timeline.to({}, { duration: 1 });
+      timeline.to({}, { duration: 0.6 });
 
       timeline.to(
         contentRef.current,
         {
-          scale: 1.28,
+          scale: 1.22,
           opacity: 0,
-          duration: 0.7,
+          duration: 0.55,
           ease: "power3.in",
         },
-        "+=0.05",
+        "+=0.04",
       );
 
       timeline.to(
         backdropRef.current,
         {
           opacity: 0,
-          duration: 0.7,
+          duration: 0.55,
           ease: "power2.out",
         },
         "<",
       );
 
-      timeline.add(() => setWipeOpen(true), ">-0.05");
-      timeline.to({}, { duration: 0.95 });
-      timeline.add(() => finishLoading(), "+=0.05");
+      timeline.add(() => setWipeOpen(true), ">-0.04");
+      timeline.to({}, { duration: 0.6 });
+      timeline.add(() => finishLoading(), "+=0.04");
     });
 
     return () => context.revert();
