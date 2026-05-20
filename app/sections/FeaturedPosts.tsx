@@ -29,8 +29,26 @@ export default function FeaturedPosts() {
     // Load twitter widgets safely
     const loadTwitter = async () => {
       try {
+        // If widgets already available, just run load
         if ((window as any).twttr?.widgets) {
           (window as any).twttr.widgets.load();
+          return;
+        }
+
+        // Otherwise inject the official widgets script and load on ready
+        if (!document.querySelector('script[src*="platform.twitter.com/widgets.js"]')) {
+          const s = document.createElement('script');
+          s.src = 'https://platform.twitter.com/widgets.js';
+          s.async = true;
+          s.charset = 'utf-8';
+          s.onload = () => {
+            try {
+              (window as any).twttr?.widgets?.load?.();
+            } catch (err) {
+              console.warn('Twitter widgets failed to load', err);
+            }
+          };
+          document.body.appendChild(s);
         }
       } catch (e) {
         console.log(e);

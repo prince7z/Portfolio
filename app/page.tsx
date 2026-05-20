@@ -28,7 +28,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Testimonials />
-      <FeaturedPosts />
+    {/*  <FeaturedPosts />*/}
 
       <Contact />
     </main>
