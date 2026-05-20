@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 
 const NAME = "PRINCE SAHU";
-const LOADING_TEXT = "LOADING...";
+const LOADING_TEXT = "Becoming ,Beyond Static..";
 
 const splitText = (text: string) => text.split("");
 
@@ -146,7 +146,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
 
         <p
           ref={loadingRef}
-          className="flex items-center gap-2  px-4 py-2 text-[0.68rem] font-normal uppercase tracking-[0.42em] sm:px-5 sm:py-2.5 sm:text-[0.72rem] sm:tracking-[0.5em]"
+          className="flex items-center gap-1  px-4 py-2 text-[0.72rem] font-normal uppercase tracking-[0.42em] sm:px-5 sm:py-2.5 sm:text-[0.72rem] sm:tracking-[0.5em]"
           aria-label={LOADING_TEXT}
           style={{
             color: baseText,
