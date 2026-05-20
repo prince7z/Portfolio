@@ -41,7 +41,7 @@ const Testimonials = () => {
           >
             <div className="flex-shrink-0">
               <div className="relative w-40 h-40 rounded-full overflow-hidden shadow-lg mx-auto lg:mx-0">
-                <Image src={image} alt={name} fill className="object-cover translate-y-1 object-center" />
+                <Image src={image} alt={name} fill className="object-cover object-center" />
               </div>
             </div>
 

@@ -118,14 +118,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${rubik.variable} ${sora.variable} ${archivo.variable} font-sans antialiased overflow-x-hidden`}
+        className={`${rubik.variable} ${sora.variable} ${archivo.variable} bg-white font-sans antialiased overflow-x-hidden dark:bg-black`}
       >
         <Providers>
           <TopoWaves />
           <SplashScreenManager>
             <Navbar />
             <Sidebar />
-            <main className=" px-5 sm:px-12">{children}</main>
+            <main className="min-h-screen bg-white px-5 sm:px-12 dark:bg-black">{children}</main>
             <Copyright />
           </SplashScreenManager>
         </Providers>

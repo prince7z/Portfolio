@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Testimonials from "./sections/Testimonials";
+import FeaturedPosts from "./sections/FeaturedPosts";
 import Contact from "./sections/Contact";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -27,6 +28,8 @@ export default function Home() {
       <Experience />
       <Projects />
       <Testimonials />
+      <FeaturedPosts />
+
       <Contact />
     </main>
   );

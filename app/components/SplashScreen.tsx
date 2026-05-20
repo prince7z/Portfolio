@@ -95,9 +95,10 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
         "-=0.1",
       );
 
-      timeline.add(() => setWipeOpen(true), "-=0.08");
-      timeline.to({}, { duration: 0.7 });
-      timeline.add(() => finishLoading(), "+=0.02");
+      timeline.to({}, { duration: 1 });
+      timeline.add(() => setWipeOpen(true));
+      timeline.to({}, { duration: 0.95 });
+      timeline.add(() => finishLoading(), "+=0.05");
     });
 
     return () => context.revert();
@@ -145,12 +146,12 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
 
         <p
           ref={loadingRef}
-          className="flex items-center gap-2 rounded-full border px-4 py-2 text-[0.68rem] font-normal uppercase tracking-[0.42em] backdrop-blur-xl sm:px-5 sm:py-2.5 sm:text-[0.72rem] sm:tracking-[0.5em]"
+          className="flex items-center gap-2  px-4 py-2 text-[0.68rem] font-normal uppercase tracking-[0.42em] sm:px-5 sm:py-2.5 sm:text-[0.72rem] sm:tracking-[0.5em]"
           aria-label={LOADING_TEXT}
           style={{
             color: baseText,
-            borderColor: isDarkTheme ? "rgba(255,255,255,0.15)" : "rgba(17,17,17,0.12)",
-            backgroundColor: isDarkTheme ? "rgba(255,255,255,0.05)" : "rgba(17,17,17,0.04)",
+            textShadow: isDarkTheme              ? "0 0 4px rgba(232,141,103,0.48), 0 0 8px rgba(232,141,103,0.32)"
+              : "0 0 4px rgba(232,141,103,0.32), 0 0 8px rgba(232,141,103,0.16)",
           }}
         >
           {loadingChars.map((letter, index) => (
@@ -165,26 +166,16 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
           ))}
         </p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: wipeOpen ? 0 : 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="mt-4 max-w-xs text-[0.68rem] uppercase tracking-[0.28em] sm:text-xs sm:tracking-[0.35em]"
-          style={{ color: baseText, opacity: 0.38 }}
-        >
-          Loading..
-        </motion.p>
       </div>
 
       <motion.div
         aria-hidden="true"
         className="absolute inset-0 z-[30]"
         style={{ backgroundColor: revealBackground }}
-        initial={{ clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", opacity: 0 }}
+        initial={{ y: 0, scale: 1, opacity: 0 }}
         animate={{
-          clipPath: wipeOpen
-            ? "polygon(100% 0, 0 0, 0 100%, 100% 100%)"
-            : "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+          y: wipeOpen ? "-100%" : 0,
+          scale: wipeOpen ? 1.04 : 1,
           opacity: wipeOpen ? 1 : 0,
         }}
         transition={{ duration: 1.05, ease: [0.76, 0, 0.24, 1] }}

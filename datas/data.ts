@@ -401,3 +401,26 @@ title:"Architecture",
   }
   ,
 ];
+
+
+
+export const featurediframes = [
+  {
+    platform: "linkedin",
+    href: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7396559820784472064",
+    frame: '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7396559820784472064?collapsed=1" height="639" width="504" frameborder="0" allowfullscreen title="Embedded post"></iframe>',
+  },
+  {
+    platform: "X(Twitter)",
+    frame:
+      '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Had an amazing time at the MetaMask Community Builder Night<br>Great conversations,solid Web3 energy, and inspiring builders all around.<br>Thanks to <a href="https://twitter.com/MetaMask?ref_src=twsrc%5Etfw">@metamask</a> <a href="https://twitter.com/Consensys?ref_src=twsrc%5Etfw">@Consensys</a> and the community for hosting!<br>Shoutout to <a href="https://twitter.com/0xVipin?ref_src=twsrc%5Etfw">@0xvipin</a> <a href="https://twitter.com/0xCommunity?ref_src=twsrc%5Etfw">@0xcommunity</a> <a href="https://twitter.com/harsh_hc07?ref_src=twsrc%5Etfw">@harsh_hc07</a> <a href="https://twitter.com/francescoswiss?ref_src=twsrc%5Etfw">@francescoswiss</a> <a href="https://twitter.com/codecrax_?ref_src=twsrc%5Etfw">@codecrax_</a> and others <a href="https://t.co/WTXnfht3LP">pic.twitter.com/WTXnfht3LP</a></p>&mdash; Prince Sahu (@PrinceSahu69495) <a href="https://twitter.com/PrinceSahu69495/status/2020816764892852492?ref_src=twsrc%5Etfw">February 9, 2026</a></blockquote>',
+  },
+  {
+    platform: "linkedin",
+    href: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7461381404564594688",
+    frame: '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7461381404564594688?collapsed=1" height="578" width="504" frameborder="0" allowfullscreen title="Embedded post"></iframe>',
+  },
+];
+/*
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7396559820784472064?collapsed=1" height="639" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7461381404564594688?collapsed=1" height="578" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> */
