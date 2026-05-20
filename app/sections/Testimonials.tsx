@@ -24,7 +24,7 @@ const Testimonials = () => {
     <section id="endorsement" className="flex flex-col mx-0 xl:mx-[10%] lg:mx-[7%] md:mx-[7%] py-28 pb-48 lg:pt-48">
       <header className="flex flex-row gap-4 justify-start items-center ">
         <span className="font-medium text-lg sm:text-2xl font-idgrotesk">
-          04. From Clients ,Engineers and Menors. 
+          04. From Clients ,Engineers and Mentors. 
         </span>
         <div className="w-[5%] lg:w-36 border-b-[1px] border-b-border-color"></div>
       </header>
