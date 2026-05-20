@@ -14,16 +14,14 @@ export const testimonials = [
     ref:"https://www.linkedin.com/in/ajay-kumar-josyula-505227b2/",
     image: "/test/aj.webp",
     testimonial:
-      "Working with Prince was a fantastic experience. He is a great communicator and always goes above and beyond to ensure project success.",
+    "Working with Prince was a fantastic experience. He is a great communicator and always goes above and beyond to ensure project success."
   },
   {
     name: "MR. Arijit Bhattacharya",
     position: "Co-Founder, Swafinix Technologies",
     ref:"https://www.linkedin.com/in/arijit-bhattacharya-505227b2/",
     image: "https://img.magnific.com/premium-vector/profession…solated-white-background_1120563-21044.jpg?w=1480",
-    testimonial:
-      "Prince's technical expertise and proactive approach made him an invaluable asset to our team. He consistently delivered results ahead of schedule.",
-  },
+testimonial: "Prince showed strong dedication, excellent client handling, and clear requirement understanding. His time management and timely delivery made him a valuable team member."  },
   {
     name: "Mr. Zohaib Hassan",
     position: "Prof. Computer Science, BGIEM University",
