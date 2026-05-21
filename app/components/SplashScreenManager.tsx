@@ -15,13 +15,10 @@ const SplashScreenManager = ({ children }: { children: React.ReactNode }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <>
-      {children}
-      {isLoading ? (
-        <SplashScreen finishLoading={() => setIsLoading(false)} />
-      ) : null}
-    </>
+  return isLoading ? (
+    <SplashScreen finishLoading={() => setIsLoading(false)} />
+  ) : (
+    <>{children}</>
   );
 };
 
