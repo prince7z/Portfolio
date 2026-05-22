@@ -52,7 +52,7 @@ export const socialLinks = [
   },
   {
     name: "Telegram",
-    link: "https://t.me/prince7z",
+    link: "https://t.me/chearub7z",
     simpleIcon: "/svgs/tele.svg",
   },
   {
@@ -62,7 +62,7 @@ export const socialLinks = [
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/prince7z/",
+    link: "https://www.instagram.com/prince.7z/",
     simpleIcon: "/svgs/insta.svg",
   },
 ];
