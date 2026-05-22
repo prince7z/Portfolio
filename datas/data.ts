@@ -8,6 +8,14 @@ export const testimonials = [
     testimonial:
     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
+    {
+    name: "Mr. Zohaib Hassan",
+    position: "Prof. Computer Science, BGIEM University",
+    ref:"https://www.linkedin.com/in/zohaib-hassan-9a1b4b1b2/",
+    image: "/test/zh.webp",
+    testimonial:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
   {
     name: "Mr. Ajay josyula",
     position: "Senior Software Engineer, Tytan Technology Inc.",
@@ -22,14 +30,7 @@ export const testimonials = [
     ref:"https://www.linkedin.com/in/arijit-bhattacharya-505227b2/",
     image: "https://img.magnific.com/premium-vector/profession…solated-white-background_1120563-21044.jpg?w=1480",
 testimonial: "Prince showed strong dedication, excellent client handling, and clear requirement understanding. His time management and timely delivery made him a valuable team member."  },
-  {
-    name: "Mr. Zohaib Hassan",
-    position: "Prof. Computer Science, BGIEM University",
-    ref:"https://www.linkedin.com/in/zohaib-hassan-9a1b4b1b2/",
-    image: "/test/zh.webp",
-    testimonial:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  }
+
 
 ];
 
