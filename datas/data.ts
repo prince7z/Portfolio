@@ -14,7 +14,7 @@ export const testimonials = [
     ref:"https://www.linkedin.com/in/zohaib-hassan-9a1b4b1b2/",
     image: "/test/zh.webp",
     testimonial:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Prince has been sincere and hardworking student in classes. He showed genuine interest in learning and applied his knowledge effectively through well-executed projects. His enthusiasm, technical skills, and commitment to improvement make him a promising young professional.",
   },
   {
     name: "Mr. Ajay josyula",
