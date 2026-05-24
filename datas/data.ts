@@ -1,15 +1,23 @@
 
 export const testimonials = [
-  {
-    name: "Ms. Sneha Taori",
-    position: "Corporate Trainer ,Speaker and Mentor",
+    {
+    name: "Mr. Junaid Qasim",
+    position: "Founder Salesakart, Global Seller",
     ref:"https://www.linkedin.com/in/thesnehataori/",
-    image: "/test/st.webp",
+    image: "https://img.magnific.com/premium-vector/profession…solated-white-background_1120563-21044.jpg?w=1480",
     testimonial:
     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
     {
-    name: "Mr. Zohaib Hassan",
+    name: "MR. Visshesh Prasad",
+    position: "International Corporate Trainer, Founder SkilluArmoury",
+    ref:"https://www.linkedin.com/in/visshesh-prasaad-80348712/",
+    image: "/test/vp_sir.webp",
+testimonial: "It has been wonderful seeing your journey as a student. Your creativity, enthusiasm, and ability to stay focused truly make you stand out. Along with your fun and energetic nature, you always brought positive energy and fresh ideas wherever you participated.You have a great balance of creativity and dedication, which will surely help you achieve success in the future. Wishing you all the very best for your journey ahead"  },
+
+
+    {
+    name: "Mr. Zohaib Hasan",
     position: "Prof. Computer Science, BGIEM University",
     ref:"https://www.linkedin.com/in/zohaib-hassan-9a1b4b1b2/",
     image: "/test/zh.webp",
@@ -24,12 +32,6 @@ export const testimonials = [
     testimonial:
     "Working with Prince was a fantastic experience. He is a great communicator and always goes above and beyond to ensure project success."
   },
-  {
-    name: "MR. Arijit Bhattacharya",
-    position: "Co-Founder, Swafinix Technologies",
-    ref:"https://www.linkedin.com/in/arijit-bhattacharya-505227b2/",
-    image: "https://img.magnific.com/premium-vector/profession…solated-white-background_1120563-21044.jpg?w=1480",
-testimonial: "Prince showed strong dedication, excellent client handling, and clear requirement understanding. His time management and timely delivery made him a valuable team member."  },
 
 
 ];
