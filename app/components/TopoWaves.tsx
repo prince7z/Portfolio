@@ -99,6 +99,7 @@ export default function TopoWaves() {
       <Canvas
         dpr={[1, 1.5]}
         camera={{ position: [0, 1, 5], fov: 45 }}
+        className="pointer-events-none"
         gl={{
           antialias: false,
           powerPreference: "high-performance",
