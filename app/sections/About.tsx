@@ -112,7 +112,7 @@ const About = () => {
                 Specializing in
               </span>
 
-              <div className="relative h-8 overflow-hidden min-w-[260px]">
+              <div className="relative h-8 w-full min-w-0 overflow-hidden sm:min-w-[260px]">
                 {roles.map((role, index) => (
                   <span
                     key={index}

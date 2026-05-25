@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { testimonials } from "@/datas/data";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,11 +8,13 @@ import { AnimatePresence, motion } from "framer-motion";
 const AUTOPLAY_MS = 6000;
 const SWIPE_THRESHOLD = 70;
 const PREVIEW_LIMIT = 180;
+const DRAG_TAP_COOLDOWN_MS = 250;
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
+  const lastDragAt = useRef(0);
 
   const goToNext = () => {
     setDirection(1);
@@ -32,6 +34,13 @@ const Testimonials = () => {
 
   const togglePause = () => {
     setIsPaused((prev) => !prev);
+  };
+
+  const handleCardTap = () => {
+    if (Date.now() - lastDragAt.current < DRAG_TAP_COOLDOWN_MS) {
+      return;
+    }
+    togglePause();
   };
 
   useEffect(() => {
@@ -72,14 +81,18 @@ const Testimonials = () => {
             key={index}
             custom={direction}
             initial={{ opacity: 0, x: direction > 0 ? 48 : -48, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            animate={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
             exit={{ opacity: 0, x: direction > 0 ? -48 : 48, filter: "blur(8px)" }}
             transition={{ duration: 0.45, ease: "easeInOut" }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.2}
-            onDragStart={() => setIsPaused(true)}
+            onDragStart={() => {
+              lastDragAt.current = Date.now();
+              setIsPaused(true);
+            }}
             onDragEnd={(_, info) => {
+              lastDragAt.current = Date.now();
               if (info.offset.x <= -SWIPE_THRESHOLD) {
                 goToNext();
                 return;
@@ -88,8 +101,8 @@ const Testimonials = () => {
                 goToPrev();
               }
             }}
-            onClick={togglePause}
-            className="flex w-full cursor-pointer select-none flex-col lg:flex-row items-center gap-8"
+            onTap={handleCardTap}
+            className="mx-auto flex w-full cursor-pointer select-none flex-col items-center justify-center gap-8 lg:flex-row"
             aria-live="polite"
             aria-label="Testimonials carousel. Tap to pause or resume autoplay. Swipe to change testimonial."
           >
@@ -99,7 +112,7 @@ const Testimonials = () => {
               </div>
             </div>
 
-            <div className="flex-1 text-center lg:text-left relative">
+            <div className="relative w-full flex-1 text-center lg:text-left">
                 <Image
                   src="https://api.iconify.design/fa6-solid/quote-left.svg"
                   alt="quote-left"

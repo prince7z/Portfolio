@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -8,6 +8,7 @@ import SplashScreenManager from "./components/SplashScreenManager";
 import { Providers } from "./providers";
 import { Archivo, Rubik, Sora } from "next/font/google";
 import TopoWaves from "./components/TopoWaves";
+import { getSiteUrl, siteConfig } from "./lib/site";
 
 export const rubik = Rubik({
   subsets: ["latin"],
@@ -32,9 +33,12 @@ export const archivo = Archivo({
 
 
 export const metadata: Metadata = {
-  title: "Prince Sahu | Full Stack Developer",
-  description:
-    "Prince Sahu is a Full Stack Developer specializing in scalable backend systems, cloud infrastructure, and modern web applications using Next.js, Node.js, Express, Redis, AWS, PostgreSQL, and TypeScript. Explore projects, architecture designs, and production-grade applications built from scratch.",
+  metadataBase: new URL(getSiteUrl()),
+  title: siteConfig.name,
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Prince Sahu",
     "Prince Sahu Portfolio",
@@ -85,15 +89,14 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Prince Sahu | Full Stack Developer",
-    description:
-      "Explore the portfolio of Prince Sahu — a Full Stack Developer focused on scalable backend systems, cloud infrastructure, system design, and modern web applications built with Next.js, Node.js, Redis, AWS, and TypeScript.",
-    url: "https://yourdomain.com",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: "/",
     type: "website",
     images: [
       {
-        url: "https://yourdomain.com/og-image.png",
-        alt: "Prince Sahu | Full Stack Developer Portfolio",
+        url: "/opengraph-image",
+        alt: siteConfig.name,
         width: 1200,
         height: 630,
       },
@@ -101,10 +104,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prince Sahu | Full Stack Developer",
-    description:
-      "Full Stack Developer building scalable backend systems, cloud-native applications, and modern web platforms using Next.js, Node.js, Redis, AWS, and TypeScript.",
-    images: "https://yourdomain.com/og-image.png",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/twitter-image"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -112,6 +114,12 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -127,14 +135,14 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-WJFBFPE5FV');` }} />
       </head>
       <body
-        className={`${rubik.variable} ${sora.variable} ${archivo.variable} bg-white font-sans antialiased overflow-x-hidden dark:bg-black`}
+        className={`${rubik.variable} ${sora.variable} ${archivo.variable} w-full max-w-full bg-white font-sans antialiased overflow-x-clip dark:bg-black`}
       >
         <Providers>
           <TopoWaves />
           <SplashScreenManager>
             <Navbar />
             <Sidebar />
-            <main className="min-h-screen px-5 sm:px-12 dark:bg-black">{children}</main>
+            <main className="min-h-screen w-full max-w-full px-4 sm:px-8 lg:px-12 dark:bg-black">{children}</main>
             <Copyright />
           </SplashScreenManager>
         </Providers>

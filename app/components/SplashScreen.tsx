@@ -134,10 +134,10 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
         <div className="noise-overlay absolute inset-0 opacity-40" />
       </div>
 
-      <div ref={contentRef} className="relative z-20 flex w-full max-w-3xl flex-col items-center px-6 text-center">
+      <div ref={contentRef} className="relative z-20 flex w-full max-w-3xl flex-col items-center px-4 sm:px-6 text-center">
         <h3
           ref={nameRef}
-          className="mb-3 flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 text-[clamp(1.8rem,5vw,3.7rem)] font-normal uppercase leading-none tracking-[0.28em] sm:text-[clamp(2.1rem,4.2vw,4.2rem)]"
+          className="mb-3 flex w-full max-w-full items-baseline justify-center gap-x-1 sm:gap-x-2 overflow-hidden whitespace-nowrap text-[clamp(1.2rem,8.4vw,3.7rem)] font-normal uppercase leading-none tracking-[0.14em] sm:tracking-[0.28em] sm:text-[clamp(2.1rem,4.2vw,4.2rem)]"
           aria-label={NAME}
         >
           {nameChars.map((letter, index) => (
@@ -147,14 +147,14 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
               className="inline-block font-normal"
               style={{ color: baseText, opacity: 0, transform: "translateY(24px) scale(0.98)", willChange: "transform,opacity,color" }}
             >
-              {letter === " " ? <span className="inline-block w-[0.35em]" /> : letter}
+              {letter === " " ? <span className="inline-block w-[0.2em] sm:w-[0.35em]" /> : letter}
             </span>
           ))}
         </h3>
 
         <p
           ref={loadingRef}
-          className="flex items-center gap-1  px-4 py-2 text-[0.72rem] font-normal uppercase tracking-[0.42em] sm:px-5 sm:py-2.5 sm:text-[0.72rem] sm:tracking-[0.5em]"
+          className="flex max-w-full items-center gap-0.5 sm:gap-1 overflow-hidden whitespace-nowrap px-2 sm:px-5 py-2 sm:py-2.5 text-[0.58rem] sm:text-[0.72rem] font-normal uppercase tracking-[0.16em] sm:tracking-[0.5em]"
           aria-label={LOADING_TEXT}
           style={{
             color: baseText,
