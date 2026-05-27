@@ -53,6 +53,11 @@ export const socialLinks = [
     simpleIcon: "/svgs/x.svg",
   },
   {
+    name: "Youtube",
+    link: "https://www.youtube.com/@prinnce7z",
+    simpleIcon: "/svgs/yt.svg",
+  },
+  {
     name: "Telegram",
     link: "https://t.me/chearub7z",
     simpleIcon: "/svgs/tele.svg",
@@ -224,7 +229,7 @@ export const technologies = [
   {
     name: "SendGrid",
     iconLink:
-      "https://upload.wikimedia.org/wikipedia/commons/8/89/SendGrid_logo.svg",
+      "/svgs/sg.svg",
   },
 
   // Security & Testing
