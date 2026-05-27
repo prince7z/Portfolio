@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Prince Sahu | Freelance Software Engineer",
+  name: "Prince Sahu | Software Engineer & Freelance Developer",
   description:
     "Prince Sahu is a freelance software engineer and full stack developer from India focused on scalable backend systems, modern web applications, ecommerce platforms, and cloud infrastructure using Node.js, Next.js, TypeScript, PostgreSQL, Redis, and AWS.",
 };

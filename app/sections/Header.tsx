@@ -35,7 +35,7 @@ const Header = () => {
 
 <div className="relative">
   <p className="mt-2 leading-relaxed text-base md:text-lg">
-    I am Prince Sahu, an India-based freelance software engineer helping businesses grow by building secure scalable applications, backend
+    an India-based software engineer and freelance developer helping businesses grow by building secure scalable applications, backend
     systems, and cloud infrastructure for modern products. My work focuses
     on{" "}
     <span className="text-[#E88D67] font-medium">
