@@ -1,9 +1,8 @@
 export const siteConfig = {
-  name: "Prince Sahu | Full Stack Developer",
+  name: "Prince Sahu | Freelance Software Engineer",
   description:
-    "Prince Sahu is a Full Stack Developer specializing in scalable backend systems, cloud infrastructure, and modern web applications using Next.js, Node.js, Express, Redis, AWS, PostgreSQL, and TypeScript. Explore projects, architecture designs, and production-grade applications built from scratch.",
+    "Prince Sahu is a freelance software engineer and full stack developer from India focused on scalable backend systems, modern web applications, ecommerce platforms, and cloud infrastructure using Node.js, Next.js, TypeScript, PostgreSQL, Redis, and AWS.",
 };
-
 export const canonicalSiteUrl = "https://princesahu.me";
 
 export const alternateSiteUrls = [

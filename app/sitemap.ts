@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteUrl}/`,
       lastModified,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
@@ -17,6 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
-    },
+    }
   ];
 }

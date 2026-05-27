@@ -107,6 +107,10 @@ const About = () => {
               the systems that power modern digital products.
             </p>
 
+            <p className="mt-3">
+              As an India-based freelancer, I partner with startups and businesses to ship reliable, scalable software.
+            </p>
+
             <div className="flex items-center gap-3 mt-6 mb-6 flex-wrap">
               <span className="text-neutral-400">
                 Specializing in
