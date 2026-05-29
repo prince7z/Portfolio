@@ -29,7 +29,6 @@ export default function Home() {
       <Projects />
       <Testimonials />
     {/*  <FeaturedPosts />*/}
-
       <Contact />
     </main>
   );
