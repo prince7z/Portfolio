@@ -55,7 +55,7 @@ const Header = () => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href={"mailto:princesahu17125@gmail.com"}
+            href={"mailto:contact@princesahu.me"}
             className="flex items-center border-black justify-center gap-3 px-5 py-2 font-medium w-max border-[1px] mt-5 "
           >
             Get in Touch

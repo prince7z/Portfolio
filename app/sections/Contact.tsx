@@ -21,10 +21,10 @@ const Contact = () => {
           consultation, or just want to say hello. Click the button below
           or send an email to{" "}
           <Link
-            href={"mailto:princesahu17125@gmail.com"}
+            href={"mailto:contact@princesahu.me"}
             className=" text-secondary-color-3 font-medium"
           >
-            princesahu17125@gmail.com
+            contact@princesahu.me
           </Link>
           .
         </p>
@@ -32,7 +32,7 @@ const Contact = () => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href={"mailto:princesahu17125@gmail.com"}
+            href={"mailto:contact@princesahu.me"}
             className=" text-base flex items-center justify-center gap-3 px-5 py-2  font-medium w-max  mt-5   border-[1px] hover:bg-[#FBEDDD]  transition-all border-black rounded-lg"
           >
             Send A Message

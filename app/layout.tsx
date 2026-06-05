@@ -206,7 +206,7 @@ export default function RootLayout({
     name: "Prince Sahu",
     url: siteUrl,
     image: `${siteUrl}/br.webp`,
-    email: "mailto:princesahu17125@gmail.com",
+    email: "mailto:contact@princesahu.me",
     jobTitle: "Freelance Software Engineer",
     description:
       "Prince Sahu is an India-based freelance software engineer specializing in scalable backend systems, cloud infrastructure, and modern web applications.",
