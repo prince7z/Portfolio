@@ -30,7 +30,7 @@ testimonial: "It has been wonderful seeing your journey as a student. Your creat
     ref:"https://www.linkedin.com/in/ajay-kumar-josyula-505227b2/",
     image: "/test/aj.webp",
     testimonial:
-    "Working with Prince was a fantastic experience. He is a great communicator and always goes above and beyond to ensure project success."
+    "I had the opportunity to work with and mentor Prince during a project. Even as a beginner, he demonstrated excellent client relationship management, strong task prioritization skills, and a proactive attitude toward delivering results. His ability to learn quickly, take ownership of responsibilities, and contribute effectively to the project's success was genuinely impressive. Prince consistently showed dedication, adaptability, and a willingness to go the extra mile, making him a valuable contributor to the team."
   },
 
 
