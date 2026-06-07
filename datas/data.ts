@@ -378,7 +378,7 @@ export const projects = [
     description:
       "Clarity AI is an AI-powered presentation automation platform that generates investment-grade decks using market research, financial data, and presentation DNA analysis. Built while exploring AI workflows and automation systems.",
     image: "/proj/clarity/126_1x_shots_so.webp",
-    liveLink: "https://www.pharmabin.org/",
+    liveLink: "https://clarityye.vercel.app/",
     stacks: ["N8N", "ReactJs", "TailwindCss", "GAMA", "Clerk Auth","LLM APIs"],
     detail:{
       "Role": "Fullstack Developer Intern",
