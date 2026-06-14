@@ -6,7 +6,7 @@ export const testimonials = [
     ref:"https://www.linkedin.com/in/thesnehataori/",
     image: "https://img.magnific.com/premium-vector/profession…solated-white-background_1120563-21044.jpg?w=1480",
     testimonial:
-    "Working with Prince Sahu was a great experience. He professionally developed our eCommerce website and Automated Systems exactly as required and added extra ordinary features too. platforms are smooth, organized, and easy to manage. His technical skills, clear communication, and on-time delivery made the entire process seamless. Highly recommended for eCommerce, web development and automation projects."
+    "Working with Prince was a great experience. He professionally developed our eCommerce website and Automated Systems exactly as required and added extra ordinary features too. platforms are smooth, organized, and easy to manage. His technical skills, clear communication, and on-time delivery made the entire process seamless. Highly recommended for eCommerce, web development and automation projects."
     },
     {
     name: "MR. Visshesh Prasad",
