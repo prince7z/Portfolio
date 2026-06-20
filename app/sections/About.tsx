@@ -13,7 +13,6 @@ const roles = [
   "App Development",
   "Security Auditing",
   "Performance Optimization",
-  "Rust Development",
 ];
 
 const About = () => {
