@@ -302,7 +302,7 @@ export default function RootLayout({
           <SplashScreenManager>
             <Navbar />
             <Sidebar />
-            <main className="min-h-screen w-full max-w-full px-4 sm:px-8 lg:px-12 dark:bg-black">{children}</main>
+            <main className="min-h-screen w-full max-w-full px-4 sm:px-8 lg:px-12 ">{children}</main>
             <Copyright />
           </SplashScreenManager>
         </Providers>
