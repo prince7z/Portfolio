@@ -223,6 +223,7 @@ export default function RootLayout({
   const personStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
+"@id": `${siteUrl}/#person`,    
     name: "Prince Sahu",
     url: siteUrl,
     image: `${siteUrl}/br.webp`,
@@ -239,12 +240,27 @@ export default function RootLayout({
         addressCountry: "IN",
       },
     },
-    sameAs: [
-      "https://github.com/prince7z",
-      "https://www.linkedin.com/in/princesahu7z",
-      "https://x.com/princesahu69495",
-      "https://www.instagram.com/prince.7z/",
-    ],
+    alternateName: [
+  "Prince Sahu",
+  "Prince7z",
+  "Prince Kumar Sahu",
+  "princesahu"
+  ,"prince7z",
+  "princesahu7z",
+  "Prince Sahu Portfolio",
+  "Prince Sahu Developer",
+  "princesahu.7z",
+  "prince.7z",
+  "chearub"
+],
+sameAs: [
+  "https://github.com/prince7z",
+  "https://www.linkedin.com/in/princesahu7z",
+  "https://x.com/princesahu69495",
+  "https://www.youtube.com/@prinnce7z",
+  "https://t.me/chearub7z",
+  "https://www.instagram.com/prince.7z"
+],
     knowsAbout: [
       "Software Engineering",
       "Freelancing",

@@ -55,17 +55,17 @@ export const socialLinks = [
   {
     name: "Youtube",
     link: "https://www.youtube.com/@prinnce7z",
-    simpleIcon: "/svgs/yt.svg",
+    simpleIcon: "/svgs/icons8-youtube.svg",
   },
   {
     name: "Telegram",
     link: "https://t.me/chearub7z",
-    simpleIcon: "/svgs/tele.svg",
+    simpleIcon: "/svgs/icons8-telegram.svg",
   },
   {
     name: "Email",
     link: "mailto:princesahu17125@gmail.com",
-    simpleIcon: "/svgs/email.svg",
+    simpleIcon: "/svgs/gmail.svg",
   },
   {
     name: "Instagram",
@@ -301,6 +301,8 @@ export const companiesInfo = [
 
 ];
 
+export const resumeUrl =
+  "https://drive.google.com/file/d/1hS4474HbqLruyj5YPSCaPDcq3htNVdoX/view?usp=sharing";
 export const projects = [
   {
     name: "BlackMail",
