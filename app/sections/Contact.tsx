@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/datas/data";
 import Image from "next/image";
 import Link from "next/link";
+import ShinyText from "../components/shinytext";
 
 const Contact = () => {
   return (
@@ -22,9 +23,20 @@ const Contact = () => {
           or send an email to{" "}
           <Link
             href={"mailto:contact@princesahu.me"}
-            className=" text-secondary-color-3 font-medium"
+            className="inline-flex items-baseline font-medium text-secondary-color-3 transition-opacity hover:opacity-90 dark:text-secondary-color"
           >
-            contact@princesahu.me
+
+            <ShinyText
+              text="contact@princesahu.me"
+              speed={2}
+              delay={0}
+              spread={120}
+              direction="left"
+              yoyo={false}
+              pauseOnHover={false}
+              disabled={false}
+              className="font-medium text-lg sm:text-xl lg:text-2xl"
+            />
           </Link>
           .
         </p>
