@@ -37,6 +37,11 @@ testimonial: "It has been wonderful seeing your journey as a student. Your creat
 ];
 
 export const socialLinks = [
+    {
+    name: "X",
+    link: "https://x.com/princesahu69495",
+    simpleIcon: "/svgs/x.svg",
+  },
   {
     name: "Github",
     link: "https://github.com/prince7z",
@@ -48,29 +53,30 @@ export const socialLinks = [
     simpleIcon: "/svgs/linkedIn.svg",
   },
   {
-    name: "X",
-    link: "https://x.com/princesahu69495",
-    simpleIcon: "/svgs/x.svg",
+    name:"Pinterest",
+    link:"https://pin.it/3l9NujR3U",
+    simpleIcon:"/svgs/p2.svg"
   },
+
   {
     name: "Youtube",
     link: "https://www.youtube.com/@prinnce7z",
     simpleIcon: "/svgs/icons8-youtube.svg",
   },
   {
-    name: "Telegram",
-    link: "https://t.me/chearub7z",
-    simpleIcon: "/svgs/icons8-telegram.svg",
+    name: "Instagram",
+    link: "https://www.instagram.com/prince.7z/",
+    simpleIcon: "/svgs/insta.svg",
   },
-  {
+    {
     name: "Email",
     link: "mailto:princesahu17125@gmail.com",
     simpleIcon: "/svgs/gmail.svg",
   },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/prince.7z/",
-    simpleIcon: "/svgs/insta.svg",
+    {
+    name: "Telegram",
+    link: "https://t.me/chearub7z",
+    simpleIcon: "/svgs/icons8-telegram.svg",
   },
 ];
 export const technologies = [
