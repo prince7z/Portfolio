@@ -312,8 +312,8 @@ export const resumeUrl =
 export const projects = [
   {
     name: "BlackMail",
-    type: "Featured Project",
-    tag: "Personal Project",
+    tag: "Featured Project",
+    type: "Personal Project",
     description:
       "BlackMail is a privacy-focused temporary email service that generates disposable email addresses instantly—no sign-up required. Perfect for website registrations, online verifications, or testing services while keeping your real inbox safe from spam and unwanted messages.",
     image: "/proj/BlackMail/Mainpage.webp",
@@ -333,8 +333,8 @@ export const projects = [
   },
   {
     name: "SalesAkart",
-    tag: "Contract Project",
-    type: "Featured Project",
+    tag: "Featured Project",
+    type: "Freelance Project",
     description:
       "SalesaKart is a production-grade eCommerce platform built to manage online sales, inventory, orders, and customer workflows efficiently. I worked as the Backend Developer, building the complete backend architecture . ",
     image: "/proj/SalesAkart/583_1x_shots_so.webp",
@@ -343,8 +343,8 @@ export const projects = [
   },
   {
     name: "MakeAlot",
-    type: "Featured Project",
-    tag: "Contract Project",
+    tag: "Featured Project",
+    type: "Freelance Project",
     description:
       "MakeAlot is a marketplace analytics and automation platform designed to track product listings, monitor stock, analyze sales trends, and automate competitive pricing workflows for sellers. I worked as the Backend Developer, building scalable APIs, queue-based processing systems, stock-tracking pipelines, and marketplace integrations.",
     image: "/proj/hunter/379_1x_shots_so.webp",
@@ -372,8 +372,8 @@ export const projects = [
 
   {
     name: "VaurLis",
-    type: "Featured Project",
-    tag: "Personal Project",
+    tag: "Featured Project",
+    type: "Personal Project",
     description:
       "VaurLis is an edtech platform for live classes, course management, and student tracking. Built while learning and exploring full-stack development, it features real-time class sessions, interactive course materials, and a user-friendly interface for students and educators.",
     image: "/proj/Vaurlis/554_1x_shots_so.webp",
