@@ -317,7 +317,7 @@ export const projects = [
     description:
       "BlackMail is a privacy-focused temporary email service that generates disposable email addresses instantly—no sign-up required. Perfect for website registrations, online verifications, or testing services while keeping your real inbox safe from spam and unwanted messages.",
     image: "/proj/BlackMail/Mainpage.webp",
-    liveLink: "https://blackmail.vercel.app",
+    liveLink: "https://blackmaill.vercel.app/",
     githubLink:"https://github.com/prince7z/tempus",
     stacks: [
       "Next.js",
