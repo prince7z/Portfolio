@@ -39,7 +39,7 @@ const Header = () => {
     architecture, and cloud infrastructure for modern products. My work focuses
     on{" "}
     <span className="text-[#E88D67] font-medium">
-      Agentic AI, performance, reliability, security, and scalability
+      Performance, Reliability, Security, and Scalability
     </span>{" "}
     — from AI agents and backend architecture to DevOps workflows, infrastructure
     management, security auditing, system optimization, and production
