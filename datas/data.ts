@@ -349,7 +349,7 @@ export const companiesInfo = [
 ];
 
 export const resumeUrl =
-  "https://drive.google.com/file/d/1hS4474HbqLruyj5YPSCaPDcq3htNVdoX/view?usp=sharing";
+  "https://drive.google.com/file/d/1ht_6WTQU3N80pvQAMDkTHTDjUB_r4x5Q/view?usp=sharing";
 export const projects = [
   {
     name: "BlackMail",
