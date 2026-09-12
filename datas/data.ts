@@ -80,25 +80,11 @@ export const socialLinks = [
   },
 ];
 export const technologies = [
-  // Languages
-  {
-    name: "TypeScript",
-    iconLink: "https://cdn.simpleicons.org/typescript",
-  },
-  {
-    name: "JavaScript",
-    iconLink: "https://cdn.simpleicons.org/javascript",
-  },
-  {
-    name: "Rust",
-    iconLink: "https://cdn.simpleicons.org/rust",
-  },
-  {
-    name: "C++",
-    iconLink: "https://cdn.simpleicons.org/cplusplus",
-  },
+  // =========================
+  // Full Stack Development
+  // =========================
 
-  // Frontend Libraries & Frameworks
+  // Frontend
   {
     name: "React",
     iconLink: "https://cdn.simpleicons.org/react",
@@ -122,10 +108,6 @@ export const technologies = [
   {
     name: "Recoil",
     iconLink: "https://cdn.simpleicons.org/recoil",
-  },
-  {
-    name: "Expo",
-    iconLink: "https://cdn.simpleicons.org/expo",
   },
 
   // Backend & APIs
@@ -163,8 +145,58 @@ export const technologies = [
     name: "Redis",
     iconLink: "https://cdn.simpleicons.org/redis",
   },
+  {
+    name: "SQLite",
+    iconLink: "https://cdn.simpleicons.org/sqlite",
+  },
 
+  // =========================
+  // Agentic AI & AI Systems
+  // =========================
+
+  {
+    name: "LangGraph",
+    iconLink: "https://cdn.simpleicons.org/langgraph",
+  },
+  {
+    name: "OpenRouter",
+    iconLink: "https://cdn.simpleicons.org/openrouter",
+  },
+  {
+    name: "Gemini",
+    iconLink: "https://cdn.simpleicons.org/googlegemini",
+  },
+  {
+    name: "Qdrant",
+    iconLink: "https://cdn.simpleicons.org/qdrant",
+  },
+  {
+    name: "Chroma",
+    iconLink: "https://cdn.simpleicons.org/chromatic",
+  },
+
+
+  // =========================
+  // Programming Languages
+  // =========================
+
+  {
+    name: "TypeScript",
+    iconLink: "https://cdn.simpleicons.org/typescript",
+  },
+  {
+    name: "JavaScript",
+    iconLink: "https://cdn.simpleicons.org/javascript",
+  },
+  {
+    name: "C++",
+    iconLink: "https://cdn.simpleicons.org/cplusplus",
+  },
+
+  // =========================
   // DevOps & Infrastructure
+  // =========================
+
   {
     name: "Docker",
     iconLink: "https://cdn.simpleicons.org/docker",
@@ -181,25 +213,14 @@ export const technologies = [
     name: "Linux",
     iconLink: "https://cdn.simpleicons.org/linux",
   },
-  {
-    name: "Git",
-    iconLink: "https://cdn.simpleicons.org/git",
-  },
-  {
-    name: "GitHub",
-    iconLink: "https://cdn.simpleicons.org/github",
-  },
 
   // Cloud & Hosting
   {
     name: "AWS",
-    iconLink: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    iconLink:
+      "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
   },
 
-  {
-    name: "Google Cloud",
-    iconLink: "https://cdn.simpleicons.org/googlecloud",
-  },
   {
     name: "Hostinger",
     iconLink: "https://cdn.simpleicons.org/hostinger",
@@ -212,8 +233,40 @@ export const technologies = [
     name: "Cloudinary",
     iconLink: "https://cdn.simpleicons.org/cloudinary",
   },
+  {name:"Vercel",iconLink:"https://cdn.simpleicons.org/vercel",},
+  {name:"Netlify",iconLink:"https://cdn.simpleicons.org/netlify",},
+  {name:"Render",iconLink:"https://cdn.simpleicons.org/render",},
+  {name:"Railway",iconLink:"https://cdn.simpleicons.org/railway",},
+  
+  // =========================
+  // Tools & Version Control
+  // =========================
 
+  {
+    name: "Git",
+    iconLink: "https://cdn.simpleicons.org/git",
+  },
+  {
+    name: "GitHub",
+    iconLink: "https://cdn.simpleicons.org/github",
+  },
+  {
+    name: "Postman",
+    iconLink: "https://cdn.simpleicons.org/postman",
+  },
+  {
+    name: "Wireshark",
+    iconLink: "https://cdn.simpleicons.org/wireshark",
+  },
+  {
+    name: "Burp Suite",
+    iconLink: "https://cdn.simpleicons.org/burpsuite",
+  },
+
+  // =========================
   // Payments & Integrations
+  // =========================
+
   {
     name: "Razorpay",
     iconLink: "https://cdn.simpleicons.org/razorpay",
@@ -227,29 +280,17 @@ export const technologies = [
     iconLink: "https://cdn.simpleicons.org/dhl",
   },
 
+  // =========================
   // Email & Communication
+  // =========================
+
   {
     name: "Brevo",
-    iconLink: "https://cdn.simpleicons.org/maildotru",
+    iconLink: "https://cdn.simpleicons.org/brevo",
   },
   {
     name: "SendGrid",
-    iconLink:
-      "/svgs/sg.svg",
-  },
-
-  // Security & Testing
-  {
-    name: "Postman",
-    iconLink: "https://cdn.simpleicons.org/postman",
-  },
-  {
-    name: "Wireshark",
-    iconLink: "https://cdn.simpleicons.org/wireshark",
-  },
-  {
-    name: "Burp Suite",
-    iconLink: "https://cdn.simpleicons.org/burpsuite",
+    iconLink: "/svgs/sg.svg",
   },
 ];
 

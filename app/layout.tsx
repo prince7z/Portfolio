@@ -76,6 +76,9 @@ export const metadata: Metadata = {
   "prince7z",
 
   // Core Identity
+  "Agentic AI Engineer",
+  "Agentic AI Developer",
+  "AI Agents Developer",
   "Full Stack Developer",
   "Full Stack Engineer",
   "Software Engineer",
@@ -262,6 +265,8 @@ sameAs: [
   "https://www.instagram.com/prince.7z"
 ],
     knowsAbout: [
+      "Agentic AI",
+      "AI Agents",
       "Software Engineering",
       "Freelancing",
       "Full Stack Development",

@@ -1,10 +1,11 @@
 # About Prince Sahu
 
-Hi, I'm Prince Sahu — a Freelance Full Stack Developer and Backend Engineer focused on building scalable web applications, backend systems, ecommerce platforms, and automation-driven products.
+Hi, I'm Prince Sahu — a Freelance Full Stack Developer, Backend Engineer, and Agentic AI Developer focused on building Agentic AI systems, scalable web applications, backend systems, ecommerce platforms, and automation-driven products.
 
-I primarily work with technologies like Next.js, React, Node.js, TypeScript, PostgreSQL, Redis, Docker, and cloud-based infrastructure to develop modern, production-ready applications.
+I primarily work with technologies like Next.js, React, Node.js, TypeScript, PostgreSQL, Redis, Docker, Agentic AI frameworks, and cloud-based infrastructure to develop modern, production-ready applications.
 
 My work is heavily focused on:
+- Agentic AI & AI Agents
 - scalable backend architecture
 - ecommerce systems
 - marketplace automation
@@ -135,8 +136,9 @@ I focus on:
 
 Available for:
 - freelance projects
+- Agentic AI development & AI workflows
 - backend engineering work
-- full stack application development
+- full stack web development
 - ecommerce platform development
 - automation systems
 - long-term collaborations

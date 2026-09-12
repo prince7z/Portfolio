@@ -52,7 +52,7 @@ const Navbar = () => {
     <>
       <section
         className={`
-          fixed top-0 h-20 lg:h-20
+          fixed top-0 h-16 lg:h-18
           flex flex-row items-center
           w-full justify-between
           px-2 sm:px-16

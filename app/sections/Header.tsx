@@ -35,14 +35,14 @@ const Header = () => {
 
 <div className="relative">
   <p className="mt-2 leading-relaxed text-base md:text-lg">
-    an India-based software engineer and freelance developer helping businesses grow by building secure scalable applications, backend
-    systems, and cloud infrastructure for modern products. My work focuses
+    an India-based software engineer and freelance developer helping businesses grow by building secure scalable systems, Agentic AI solutions, backend
+    architecture, and cloud infrastructure for modern products. My work focuses
     on{" "}
     <span className="text-[#E88D67] font-medium">
-      performance, reliability, security, and scalability
+      Agentic AI, performance, reliability, security, and scalability
     </span>{" "}
-    — from backend architecture and DevOps workflows to infrastructure
-    management, security auditing, application optimization, and production
+    — from AI agents and backend architecture to DevOps workflows, infrastructure
+    management, security auditing, system optimization, and production
     deployment.
     <br />
     <br />

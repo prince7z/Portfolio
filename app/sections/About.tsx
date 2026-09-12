@@ -6,13 +6,12 @@ import gsap from "gsap";
 
 const roles = [
   "Backend Engineering",
-  "DevOps",
-  "Cloud Infrastructure",
   "Full Stack Development",
   "System Design",
-  "App Development",
+  "DevOps",
   "Security Auditing",
-  "Performance Optimization",
+  "Automation",
+  "Agentic AI"
 ];
 
 const About = () => {
@@ -127,17 +126,9 @@ const About = () => {
               </div>
             </div>
 
-            <p>
-              I help businesses build scalable, secure, and production-ready
-              applications through reliable architecture, infrastructure
-              management, and modern engineering practices.
-            </p>
-
-            <br />
 
             <p>
-              My work spans backend engineering, DevOps workflows, cloud
-              infrastructure, performance optimization, and security-focused
+              My work spans backend engineering, AI Agents, DevOps, performance optimization, and security-focused
               development — helping products scale efficiently in production.
             </p>
           </article>
