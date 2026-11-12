@@ -352,7 +352,18 @@ export const resumeUrl =
    "https://drive.google.com/file/d/1ht_6WTQU3N80pvQAMDkTHTDjUB_r4x5Q/view?usp=sharing";
 export const projects = [
   {
-    name: "BlackMail",
+    name:"JCom: Retail Management System",
+    tag: "Featured Project",
+    type: "Freelance Project",
+    description:
+      "JCom is an all-in-one multi-company, multi-vendor POS and business management platform that centralizes employee management, inventory, expenses, sales, and financial reporting, with multiple Takealot integrations for real-time sales analytics, revenue tracking, and profit & loss insights.",
+
+    image: "/proj/jcom/jcom.png",
+    liveLink: "https://jcom.thesales.site/auth/login?demo=true",
+    stacks: ["React.js", "Node.js", "TypeScript", "Express.js", "PostgreSQL", "Redis", "Tailwind CSS", "S3", "BullMQ"],
+  },
+  {
+    name: "BlackMail: Temporary Email Service",
     tag: "Featured Project",
     type: "Personal Project",
     description:
@@ -373,7 +384,7 @@ export const projects = [
     ],
   },
   {
-    name: "SalesAkart",
+    name: "SalesAkart: eCommerce Platform",
     tag: "Featured Project",
     type: "Freelance Project",
     description:
@@ -383,7 +394,7 @@ export const projects = [
     stacks: ["Next.js", "Node.js", "Express", "Redis", "Tailwind CSS","VPS", "ShipLogic", "PayFast", "SES", "S3", "Brevo"],
   },
   {
-    name: "MakeAlot",
+    name: "MakeAlot: Marketplace Analytics Platform",
     tag: "Featured Project",
     type: "Freelance Project",
     description:
