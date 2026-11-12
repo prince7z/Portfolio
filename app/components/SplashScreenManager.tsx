@@ -3,14 +3,13 @@
 import React, { useEffect, useState } from "react";
 import SplashScreen from "./SplashScreen";
 
-// Reduced fallback so the splash doesn't hold the page too long
-const FALLBACK_DURATION_MS = 5000;
+const MAX_SPLASH_DURATION_MS = 2500;
 
 const SplashScreenManager = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), FALLBACK_DURATION_MS);
+    const timer = setTimeout(() => setIsLoading(false), MAX_SPLASH_DURATION_MS);
     return () => clearTimeout(timer);
   }, []);
 

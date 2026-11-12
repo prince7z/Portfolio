@@ -1,5 +1,6 @@
 import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 import { SiLoom } from "react-icons/si";
 
 interface CardProps {
@@ -34,28 +35,32 @@ const Card = ({
       data-aos-duration="2000"
     >
       <div
-        className={`w-full sm:w-[90%] lg:w-[60%] shadow ${
+        className={`relative h-48 w-full shadow sm:h-56 sm:w-[90%] md:h-64 lg:h-[370px] lg:w-[60%] ${
           isEven ? "lg:order-1" : "lg:order-2"
         }`}
       >
         {liveLink ? (
           <Link
             href={liveLink}
-            className="w-full block"
+            className="absolute inset-0 block"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src={image}
               alt={`${name} Image`}
-              className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-[370px] lg:grayscale-[50%] lg:group-hover:grayscale-0 transition-all lg:object-left rounded-t-lg lg:rounded-lg shadow-lg"
+              fill
+              sizes="(min-width: 1024px) 50vw, (min-width: 640px) 90vw, 100vw"
+              className="object-cover lg:grayscale-[50%] lg:group-hover:grayscale-0 transition-all lg:object-left rounded-t-lg lg:rounded-lg shadow-lg"
             />
           </Link>
         ) : (
-          <img
+          <Image
             src={image}
             alt={`${name} Image`}
-            className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-[370px] lg:grayscale-[50%] lg:group-hover:grayscale-0 transition-all lg:object-left rounded-t-lg lg:rounded-lg shadow-lg"
+            fill
+            sizes="(min-width: 1024px) 50vw, (min-width: 640px) 90vw, 100vw"
+            className="object-cover lg:grayscale-[50%] lg:group-hover:grayscale-0 transition-all lg:object-left rounded-t-lg lg:rounded-lg shadow-lg"
           />
         )}
       </div>

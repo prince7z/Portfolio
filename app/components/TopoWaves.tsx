@@ -72,7 +72,7 @@ function TopographicPlane() {
     <>
       <ambientLight intensity={isDark ? 0.5 : 1.0} />
       <mesh rotation={[-Math.PI / 2.5, 0, 0]} position={[0, 0, -5]}>
-        <planeGeometry ref={geomRef} args={[40, 30, 80, 60]} />
+        <planeGeometry ref={geomRef} args={[40, 30, 48, 36]} />
         <meshStandardMaterial
           ref={matRef}
           wireframe

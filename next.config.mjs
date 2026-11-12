@@ -20,7 +20,6 @@ const nextConfig = {
     return config;
   },
   images: {
-    unoptimized: true,
     domains: [
       "cdn.simpleicons.org",
       "media.licdn.com",

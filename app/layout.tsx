@@ -10,21 +10,21 @@ import { Archivo, Rubik, Sora } from "next/font/google";
 import TopoWaves from "./components/TopoWaves";
 import { getSiteUrl, siteConfig } from "./lib/site";
 
-export const rubik = Rubik({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
   variable: "--font-rubik",
 });
 
-export const sora = Sora({
+const sora = Sora({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   display: "swap",
   variable: "--font-sora",
 });
 
-export const archivo = Archivo({
+const archivo = Archivo({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   display: "swap",

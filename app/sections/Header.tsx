@@ -80,7 +80,6 @@ const Header = () => {
     <Image
       alt="profile image"
       src={profileImage}
-      quality={100}
       fill
       priority
       className="

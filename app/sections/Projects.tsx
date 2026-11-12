@@ -20,7 +20,7 @@ const Projects = () => {
       </header>
       <div className="flex flex-col gap-24 mt-10">
         {projects
-          .slice(0, 3)
+          .slice(0, 4)
           .map(
             (project, id) =>
               project && (
