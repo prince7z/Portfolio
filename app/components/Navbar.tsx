@@ -149,7 +149,7 @@ const Navbar = () => {
                 <Button variant={"link"} key={id} asChild>
                   <Link
                     href={section.idRoute}
-                    className="dark:text-primary-color"
+                    className="dark:text-secondary-color-3"
                     onClick={toggleMenu}
                   >
                     {section.name}
